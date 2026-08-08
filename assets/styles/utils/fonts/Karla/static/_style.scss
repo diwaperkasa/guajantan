@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "karla";
+    src: url("../guajantan/assets/styles/utils/fonts/Karla/static/Karla-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+
+.karla {
+    font-family: karla, sans-serif;
+}

@@ -1,0 +1,77 @@
+@each $name, $color in $theme-colors {
+  .text-#{$name}-hover {
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $color !important;
+    }
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .border-#{$name}-hover {
+    transition: border-color .2s ease-in-out;
+
+    &:hover {
+      border-color: $color !important;
+    }
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .border-#{$name}-hover {
+    border: 1px solid transparent;
+    transition: border-color .2s ease-in-out;
+
+    &:hover {
+      border: 1px solid $color !important;
+    }
+  }
+}
+
+@each $bp in map-keys($grid-breakpoints) {
+  .position-#{$bp}-unset {
+    @include media-breakpoint-up($bp) {
+      position: unset !important;
+    }
+  }
+}
+
+@mixin generate-top-rem($max) {
+  @for $i from 1 through $max {
+    .top-#{$i}-rem {
+      top: #{$i}rem !important;
+    }
+  }
+}
+// usage
+@include generate-top-rem(10);
+
+@mixin generate-bottom-rem($max) {
+  @for $i from 1 through $max {
+    .bottom-#{$i}-rem {
+      bottom: #{$i}rem !important;
+    }
+  }
+}
+// usage
+@include generate-bottom-rem(10);
+
+@each $bp, $value in $grid-breakpoints {
+  .col-#{$bp}-5th {
+    @include media-breakpoint-up($bp) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .text-#{$name}-hover {
+    transition: color .2s ease;
+
+    &:hover {
+      color: var(--bs-#{$name});
+    }
+  }
+}

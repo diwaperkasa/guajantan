@@ -1,0 +1,92 @@
+:root {
+    --bs-body-font-family: "Source Serif 4", var(--bs-font-sans-serif);
+}
+
+.header-logo {
+    max-width: 125px;
+
+    @media (min-width: 992px) {
+        max-width: 300px;
+    }
+}
+
+.navbar-hide {
+    position: fixed;
+    top: 0;
+    z-index: 1020;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.ratio-16x9 {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.ratio-4x3 {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.ratio-1x1 {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.top-n1 {
+    top: -1rem !important;
+}
+
+.top-n1-5 {
+    top: -1.5rem !important;
+}
+
+.flickity-prev-next-button {
+    width: 44px !important;
+}
+
+/* Letter Spacing Utilities */
+
+.ls-tighter {
+  letter-spacing: -0.05em;
+}
+
+.ls-tight {
+  letter-spacing: -0.025em;
+}
+
+.ls-normal {
+  letter-spacing: 0;
+}
+
+.ls-wide {
+  letter-spacing: 0.025em;
+}
+
+.ls-wider {
+  letter-spacing: 0.05em;
+}
+
+.ls-widest {
+  letter-spacing: 0.1em;
+}
+
+.border-thick {
+    --bs-border-width: 2px !important;
+}
+
+.border-thicker {
+    --bs-border-width: 3px !important;
+}
+
+.border-thickest {
+    --bs-border-width: 7px !important;
+}

@@ -1,0 +1,24 @@
+/*!
+Theme Name: Guajantan
+Theme URI: https://example.com
+Description: Custom Genesis Child Theme
+Author: Diwa Perkasa
+Author URI: https://example.com
+Template: genesis
+Version: 1.0
+*/
+
+@charset 'UTF-8';
+
+// Configuration
+@import 'config/variables';
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+// Mixins
+@import 'config/mixins';
+// Utilities
+@import 'utils/fonts';
+// Vendor
+@import 'flickity/css/flickity.css';
+// Custom
+@import 'custom';

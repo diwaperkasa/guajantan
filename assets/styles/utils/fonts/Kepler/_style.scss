@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "kepler";
+    src: url("../guajantan/assets/styles/utils/fonts/Kepler/Kepler-Std-Semicondensed-Display.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+.kepler {
+    font-family: kepler, serif;
+}
