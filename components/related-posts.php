@@ -5,13 +5,13 @@ $related_posts = new WP_Query([
     'posts_per_page' => 5,
     'post__not_in' => [get_the_ID()],
     'orderby' => 'rand',
-    'tax_query' => [
-        [
-            'taxonomy' => 'category',
-            'field' => 'term_id',
-            'terms' => wp_get_post_categories(get_the_ID()),
-        ],
-    ],
+    // 'tax_query' => [
+    //     [
+    //         'taxonomy' => 'category',
+    //         'field' => 'term_id',
+    //         'terms' => wp_get_post_categories(get_the_ID()),
+    //     ],
+    // ],
 ]);
 ?>
 <h2 class="mt-2 mb-4 fs-5">
