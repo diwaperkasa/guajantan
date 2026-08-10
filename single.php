@@ -52,7 +52,7 @@ function content()
                             <?php $tags = get_the_tags(get_the_ID()); ?>
                             <?php if ($tags): ?>
                                 <div class="post__tags">
-                                    <nav class="karla">
+                                    <nav class="playfair-font">
                                         <h3 class="text-uppercase fs-6 fw-bold">Read More About:</h3>
                                         <ol class="list-unstyled d-flex flex-wrap gap-2">
                                             <?php foreach ($tags as $tag): ?>
