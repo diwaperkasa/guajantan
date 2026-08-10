@@ -28,7 +28,7 @@ function content()
                         <?php endif; ?>
                         <p class="inter-font text-danger fs-small mb-0 ls-wider text-uppercase mb-3"><?= get_the_date('j F, Y'); ?></p>
                     </div>
-                    <h1 class="post__title fw-bold playfair-font mb-3"><?php the_title(); ?></h1>
+                    <h1 class="post__title playfair-font mb-3"><?php the_title(); ?></h1>
                     <?php if ($secondaryTitle = get_post_meta(get_the_ID(), '_secondary_title', true)): ?>
                         <p class="inter-font fs-5 mb-3 text-secondary fst-italic"><?= $secondaryTitle; ?></p>
                     <?php endif; ?>
