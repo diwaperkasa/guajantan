@@ -32,6 +32,16 @@ function content()
                     <?php if ($secondaryTitle = get_post_meta(get_the_ID(), '_secondary_title', true)): ?>
                         <p class="inter-font fs-5 mb-3 text-secondary fst-italic"><?= $secondaryTitle; ?></p>
                     <?php endif; ?>
+                    <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
+                    <?php if ($writers && !is_wp_error($writers)): ?>
+                        <p class="text-secondary fs-small fw-light ls-wider mb-3">By
+                            <?php foreach ($writers as $writer): ?>
+                                <a href="<?= get_term_link($writer) ?>" class="text-decoration-none text-secondary">
+                                    <span class="text-capitalize"><?= $writer->name ?></span>
+                                </a>
+                            <?php endforeach; ?>
+                        </p>
+                    <?php endif; ?>
                 </header>
             </div>
 
