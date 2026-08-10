@@ -46,7 +46,7 @@
                     <ul class="navbar-nav">
                         <?php foreach ($menus as $menu): ?>
                             <li class="nav-item">
-                                <a class="nav-link inter-font fw-bold text-uppercase text-black ls-wider" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                                <a class="nav-link inter-font text-uppercase text-black ls-wider" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -97,7 +97,7 @@
                 <ul class="navbar-nav">
                     <?php foreach ($menus as $menu): ?>
                         <li class="nav-item">
-                            <a class="nav-link inter-font fw-bold text-uppercase text-black ls-wider" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                            <a class="nav-link inter-font text-uppercase text-black ls-wider" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

@@ -12,10 +12,10 @@ function crb_attach_theme_options()
 {
     \Carbon_Fields\Container::make( 'theme_options', __( 'Theme Options' ) )
         ->add_fields( array(
-            \Carbon_Fields\Field::make( 'text', 'crb_facebook', 'Facebook URL' ),
-            \Carbon_Fields\Field::make( 'text', 'crb_twitter', 'Twitter URL' ),
-            \Carbon_Fields\Field::make( 'text', 'crb_instagram', 'Instagram URL' ),
-            \Carbon_Fields\Field::make( 'text', 'crb_linkedin', 'LinkedIn URL' ),
+            \Carbon_Fields\Field::make( 'text', 'setting_facebook', 'Facebook URL' ),
+            \Carbon_Fields\Field::make( 'text', 'setting_twitter', 'Twitter URL' ),
+            \Carbon_Fields\Field::make( 'text', 'setting_instagram', 'Instagram URL' ),
+            \Carbon_Fields\Field::make( 'text', 'setting_linkedin', 'LinkedIn URL' ),
         ) );
 
     \Carbon_Fields\Container::make( 'post_meta', 'Homepage Settings' )

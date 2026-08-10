@@ -13,8 +13,10 @@ add_action( 'after_setup_theme', function() {
     remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
     register_nav_menus([
-        'mobile' => __('Mobile'),
-        'offcanvas' => __('Off Canvas'),
+        'primary' => __('Primary Navigation'),
+        'header' => __('Header Navigation'),
+        'footer' => __('Footer Navigation'),
+        'offcanvas' => __('Off Canvas Navigation'),
     ]);
 });
 
