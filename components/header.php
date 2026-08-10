@@ -112,7 +112,7 @@
             <ul class="nav overflow-x-auto justify-content-between align-items-center flex-nowrap text-nowrap w-100">
                 <?php foreach ($menus as $menu): ?>
                     <li class="nav-item">
-                        <a class="nav-link ps-0 pe-3 py-0 inter-font fw-bold text-uppercase text-black" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <a class="nav-link ps-0 pe-3 py-0 inter-font text-uppercase text-black" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>

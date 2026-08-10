@@ -36,7 +36,7 @@ function content()
             </div>
 
             <section class="border-bottom border-dark">
-                <div class="container">
+                <div class="container container-hero">
                     <div class="post__thumbnail">
                         <figure>
                             <?php the_post_thumbnail('full', ['class' => 'img-fluid w-100']); ?>

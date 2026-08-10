@@ -23,7 +23,7 @@ function content()
 
     ?>
         <section id="hero-section" class="border-bottom border-dark">
-            <div class="container">
+            <div class="container container-hero">
                 <?php if ($post) : setup_postdata($post); ?>
                     <?php get_template_part('components/post', 'hero') ?>
                 <?php endif; ?>
