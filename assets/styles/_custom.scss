@@ -96,3 +96,9 @@
         font-family: 'Playfair Display';
     }
 }
+
+.container-hero {
+    @include media-breakpoint-down(md) {
+        --bs-gutter-x: 0;
+    }
+}

@@ -13411,3 +13411,9 @@ textarea.form-control-lg {
 .post__content h1, .post__content .h1, .post__content h2, .post__content .h2, .post__content h3, .post__content .h3, .post__content h4, .post__content .h4, .post__content h5, .post__content .h5, .post__content h6, .post__content .h6 {
   font-family: "Playfair Display";
 }
+
+@media (max-width: 767.98px) {
+  .container-hero {
+    --bs-gutter-x: 0;
+  }
+}
