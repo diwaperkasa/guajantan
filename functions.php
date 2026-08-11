@@ -7,6 +7,16 @@ require_once get_template_directory() . '/lib/init.php';
 define('CHILD_THEME_NAME', 'Guajantan Theme');
 define('CHILD_THEME_VERSION', '1.0');
 
+add_theme_support( 'html5', [
+    'comment-list', 
+    'comment-form', 
+    'search-form', 
+    'gallery', 
+    'caption', 
+    'style', 
+    'script' 
+]);
+
 add_action( 'after_setup_theme', function() {
     remove_action('genesis_after_header', 'genesis_do_nav');
     remove_action('genesis_after_header', 'genesis_do_subnav');
