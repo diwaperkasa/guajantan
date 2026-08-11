@@ -37,13 +37,20 @@ $query = new WP_Query([
                 </a>
             </div>
             <?php $menus = get_wp_menu_tree('footer'); ?>
-            <ul class="nav justify-content-center align-items-center flex-nowrap text-nowrap">
+            <div class="row justify-content-sm-center">
                 <?php foreach ($menus as $menu): ?>
-                    <li class="nav-item px-2">
-                        <a class="fs-small fw-light text-white text-secondary-hover nav-link inter-font text-uppercase" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
-                    </li>
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <p class="playfair-font fw-light text-white text-secondary-hover nav-link inter-font text-uppercase"><?= $menu['title'] ?></p>
+                        <ul class="nav flex-column">
+                            <?php foreach ($menu['children'] as $child): ?>
+                                <li class="nav-item px-2">
+                                    <a class="fs-small fw-light text-white text-secondary-hover nav-link inter-font text-capitalize" href="<?= $child['url'] ?>"><?= $child['title'] ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+            </div>
         </div>
     </section>
 </footer>
