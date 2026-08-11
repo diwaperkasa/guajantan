@@ -74,7 +74,9 @@ function content()
                             <?php endif; ?>
                         </div>
                         <div class="col-md-4">
-                            <?php get_template_part('components/related-posts') ?>
+                            <div class="post__sidebar pt-2">
+                                <?php get_template_part('components/related-posts') ?>
+                            </div>
                         </div>
                     </div>
                 </div>
