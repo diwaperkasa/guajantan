@@ -19,7 +19,7 @@
             ?>
             <?php if ($primary_category && !is_wp_error($primary_category)): ?>
                 <a href="<?= get_term_link($primary_category) ?>" class="text-decoration-none text-secondary">
-                    <p class="text-secondary fs-small mb-0 fw-light ls-wider text-uppercase"><?= $primary_category->name ?></p>
+                    <p class="text-secondary mb-0 fw-light ls-wider text-uppercase"><?= $primary_category->name ?></p>
                 </a>
             <?php endif; ?>
             <a href="<?php the_permalink(); ?>" class="text-decoration-none text-dark text-secondary-hover">
@@ -27,7 +27,7 @@
             </a>
             <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
             <?php if ($writers && !is_wp_error($writers)): ?>
-                <p class="text-secondary fs-small fw-light ls-wider mb-0">By
+                <p class="text-secondary fw-light ls-wider mb-0">By
                     <?php foreach ($writers as $writer): ?>
                         <a href="<?= get_term_link($writer) ?>" class="text-decoration-none text-secondary">
                             <span class="text-capitalize"><?= $writer->name ?></span>

@@ -40,7 +40,7 @@ $query = new WP_Query([
             <ul class="nav justify-content-center align-items-center flex-nowrap text-nowrap">
                 <?php foreach ($menus as $menu): ?>
                     <li class="nav-item px-2">
-                        <a class="fw-light text-white text-secondary-hover nav-link inter-font text-uppercase" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <a class="fs-small fw-light text-white text-secondary-hover nav-link inter-font text-uppercase" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>

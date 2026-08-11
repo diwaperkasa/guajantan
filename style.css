@@ -13417,3 +13417,12 @@ textarea.form-control-lg {
     --bs-gutter-x: 0;
   }
 }
+
+.bg-blur {
+  --bs-bg-opacity: .75;
+  backdrop-filter: blur(5px);
+}
+
+.fs-small {
+  font-size: 0.75rem !important;
+}

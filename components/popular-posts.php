@@ -12,10 +12,10 @@
                 'range' => 'weekly'
             ]);
         ?>
-        <div class="row justify-content-between align-items-center">
+        <div class="row justify-content-between">
             <?php foreach ($popularPostIds as $index => $postId): ?>
                 <?php $post = get_post($postId); setup_postdata($post); ?>
-                <div class="col-sm-6 <?= $index % 2 == 0 ? "col-md-4" : "col-md-3" ?>">
+                <div class="col-sm-6 <?= $index % 2 == 0 ? "col-md-4" : "col-md-3 pt-md-5" ?>">
                     <?php get_template_part('components/post', 'square') ?>
                 </div>
             <?php endforeach; ?>

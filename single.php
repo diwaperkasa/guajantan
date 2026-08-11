@@ -23,18 +23,18 @@ function content()
                     <div class="d-flex justify-content-between">
                         <?php if ($primary_category && !is_wp_error($primary_category)): ?>
                             <a href="<?= get_term_link($primary_category) ?>" class="text-decoration-none text-secondary">
-                                <p class="inter-font text-secondary fs-small mb-0 fw-light ls-wider text-uppercase mb-3"><?= $primary_category->name ?></p>
+                                <p class="inter-font text-secondary mb-0 fw-light ls-wider text-uppercase mb-3"><?= $primary_category->name ?></p>
                             </a>
                         <?php endif; ?>
-                        <p class="inter-font text-danger fs-small mb-0 ls-wider text-uppercase mb-3"><?= get_the_date('j F, Y'); ?></p>
+                        <p class="inter-font text-danger mb-0 ls-wider text-uppercase mb-3"><?= get_the_date('j F, Y'); ?></p>
                     </div>
                     <h1 class="post__title playfair-font mb-3"><?php the_title(); ?></h1>
-                    <?php if ($secondaryTitle = get_post_meta(get_the_ID(), '_secondary_title', true)): ?>
+                    <?php if ($secondaryTitle = get_the_subtitle(get_the_ID(), '', '', false)): ?>
                         <p class="inter-font fs-5 mb-3 text-secondary fst-italic"><?= $secondaryTitle; ?></p>
                     <?php endif; ?>
                     <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
                     <?php if ($writers && !is_wp_error($writers)): ?>
-                        <p class="text-secondary fs-small fw-light ls-wider mb-3">By
+                        <p class="text-secondary fw-light ls-wider mb-3">By
                             <?php foreach ($writers as $writer): ?>
                                 <a href="<?= get_term_link($writer) ?>" class="text-decoration-none text-secondary">
                                     <span class="text-capitalize"><?= $writer->name ?></span>

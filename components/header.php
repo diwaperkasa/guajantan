@@ -67,8 +67,8 @@
     </div>
 </header>
 
-<header id="mainNav" class="navbar-hide w-100">
-    <nav class="navbar bg-white navbar-expand-lg border-top border-bottom">
+<header id="mainNav" class="navbar-hide w-100 bg-white bg-blur">
+    <nav class="navbar navbar-expand-lg border-top border-bottom">
         <div class="container-fluid">
             <ul class="d-flex list-unstyled navbar-brand m-0 p-0 align-items-center">
                 <li class="nav-item">
@@ -107,7 +107,7 @@
             </a>
         </div>
     </nav>
-    <nav class="navbar navbar-collapse bg-white border-bottom d-lg-none">
+    <nav class="navbar navbar-collapse border-bottom d-lg-none">
         <div class="container-fluid">
             <ul class="nav overflow-x-auto justify-content-between align-items-center flex-nowrap text-nowrap w-100">
                 <?php foreach ($menus as $menu): ?>
