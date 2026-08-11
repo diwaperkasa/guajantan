@@ -30,7 +30,7 @@ function content()
                     </div>
                     <h1 class="post__title playfair-font mb-3"><?php the_title(); ?></h1>
                     <?php if ($secondaryTitle = get_the_subtitle(get_the_ID(), '', '', false)): ?>
-                        <p class="inter-font fs-5 mb-3 text-secondary fst-italic"><?= $secondaryTitle; ?></p>
+                        <p class="fs-5 mb-3 text-secondary fst-italic"><?= $secondaryTitle; ?></p>
                     <?php endif; ?>
                     <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
                     <?php if ($writers && !is_wp_error($writers)): ?>
