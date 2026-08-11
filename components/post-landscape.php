@@ -23,7 +23,7 @@
                 </a>
             <?php endif; ?>
             <a href="<?php the_permalink(); ?>" class="text-decoration-none text-dark text-secondary-hover">
-                <h2 class="playfair-font h2"><?= the_title() ?></h2>
+                <h2 class="playfair-font h3"><?= the_title() ?></h2>
             </a>
             <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
             <?php if ($writers && !is_wp_error($writers)): ?>
