@@ -1,7 +1,7 @@
 <article <?php post_class("my-4"); ?>>
     <figure class="position-relative">
         <a href="<?php the_permalink(); ?>" class="text-decoration-none">
-            <?= get_the_post_thumbnail(get_the_ID(), 'thumbnail', ['class' => 'ratio-16x9 img-fluid w-100']); ?>
+            <?= get_the_post_thumbnail(get_the_ID(), 'full', ['class' => 'ratio-16x9 img-fluid w-100']); ?>
         </a>
         <div class="position-absolute start-0 top-0 w-100 d-flex justify-content-center mt-n3">
             <div class="bg-white p-1 border border-dark">

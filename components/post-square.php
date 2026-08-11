@@ -1,7 +1,7 @@
 <article <?php post_class("mb-4"); ?>>
     <figure class="mb-0">
         <a href="<?php the_permalink(); ?>" class="text-decoration-none">
-            <?= get_the_post_thumbnail(get_the_ID(), 'thumbnail', ['class' => 'img-fluid w-100 ratio-1x1']); ?>
+            <?= get_the_post_thumbnail(get_the_ID(), 'full', ['class' => 'img-fluid w-100 ratio-1x1']); ?>
         </a>
     </figure>
     <div class="position-relative mt-n4 ps-3">
