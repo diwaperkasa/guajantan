@@ -111,3 +111,8 @@
 .fs-small {
     font-size: 0.75rem !important;
 }
+
+.btn-white:hover {
+    background-color: #f8f9fa;
+    border: var(--bs-btn-border-width) solid #f8f9fa;
+}
