@@ -43,7 +43,7 @@ $query = new WP_Query([
                         <p class="playfair-font fw-light text-white text-secondary-hover nav-link inter-font text-uppercase"><?= $menu['title'] ?></p>
                         <ul class="list-unstyled">
                             <?php foreach ($menu['children'] as $child): ?>
-                                <li class="nav-item">
+                                <li class="nav-item mb-1">
                                     <a class="fs-small fw-light text-white text-secondary-hover nav-link inter-font text-capitalize" href="<?= $child['url'] ?>"><?= $child['title'] ?></a>
                                 </li>
                             <?php endforeach; ?>
