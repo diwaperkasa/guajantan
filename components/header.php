@@ -11,8 +11,8 @@
                                 </svg>
                             </button>
                         </li>
-                        <li class="nav-item">
-                            <button style="height: 40px; width: 40px;" class="btn btn-white navbar-brand p-0 btn fs-6 d-flex align-items-center justify-content-center rounded-circle" data-bs-toggle="offcanvas" href="#offcanvasMenu" aria-controls="offcanvasMenu">
+                        <li class="nav-item d-none d-lg-inline">
+                            <button style="height: 40px; width: 40px;" class="btn btn-white navbar-brand p-0 btn fs-6 d-flex align-items-center justify-content-center rounded-circle" data-bs-toggle="offcanvas" href="#offcanvasSearch" aria-controls="offcanvasSearch">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                                 </svg>
@@ -32,9 +32,14 @@
                         <a class="navbar-brand btn p-0 me-3 d-none d-lg-inline">
                             <span class="text-uppercase inter-font fw-bold ls-wider">newsletter</span>
                         </a>
-                        <a class="navbar-brand btn p-0">
+                        <a class="navbar-brand btn p-0 d-none d-lg-inline">
                             <span class="text-uppercase inter-font fw-bold text-danger ls-wider">subscribe</span>
                         </a>
+                        <button style="height: 40px; width: 40px;" class="d-lg-none btn btn-white navbar-brand p-0 btn fs-6 d-flex align-items-center justify-content-center rounded-circle" data-bs-toggle="offcanvas" href="#offcanvasSearch" aria-controls="offcanvasSearch">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -78,7 +83,7 @@
                         </svg>
                     </button>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-lg-inline">
                     <button class="navbar-brand btn p-0 fs-6 d-flex align-items-center" data-bs-toggle="offcanvas" href="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -102,9 +107,16 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <a class="navbar-brand btn p-0 fs-6 me-0">
+            <a class="navbar-brand btn p-0 fs-6 me-0 d-none d-lg-inline">
                 <span class="text-uppercase inter-font fw-bold text-danger ls-wider">subscribe</span>
             </a>
+            <div class="navbar-brand btn p-0 me-0 d-lg-none">
+                <button style="height: 40px; width: 40px;" class="d-lg-none btn p-0 btn fs-6 d-flex align-items-center justify-content-center rounded-circle" data-bs-toggle="offcanvas" href="#offcanvasSearch" aria-controls="offcanvasSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
     <nav class="navbar navbar-collapse border-bottom d-lg-none">
@@ -120,7 +132,7 @@
     </nav>
 </header>
 
-<div class="offcanvas offcanvas-top vh-100" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+<div class="offcanvas offcanvas-top vh-100 w-100 bg-white bg-blur" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
         <div class="container">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -128,19 +140,32 @@
     </div>
     <div class="offcanvas-body">
         <div class="container">
-            <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-            </div>
-            <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
+            <div class="row">
                 <?php $menus = get_wp_menu_tree('offcanvas'); ?>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <?php foreach ($menus as $menu): ?>
+                    <div class="col-md-3 col-sm-4 col-xs-6 mb-4">
+                        <a class="dropdown-item playfair-font text-decoration-none text-white fs-5" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <ul class="list-unstyled">
+                            <?php foreach ($menu['children'] as $child): ?>
+                                <li class="nav-item mb-1">
+                                    <a class="dropdown-item inter-font text-decoration-none text-white fs-6" href="<?= $child['url'] ?>"><?= $child['title'] ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-top vh-100 w-100 bg-white bg-blur" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+    <div class="offcanvas-body">
+        <div class="container h-100">
+            <div class="d-flex h-100 align-items-center justify-content-center">
+                <form class="d-flex" role="search" action="<?= home_url() ?>" method="get">
+                    <input class="playfair-font bg-transparent form-control border-0 rounded-0 border-bottom border-dark text-uppercase" type="search" placeholder="Search" aria-label="Search" name="s" required />
+                </form>
             </div>
         </div>
     </div>
