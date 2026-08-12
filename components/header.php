@@ -144,7 +144,7 @@
                 <?php $menus = get_wp_menu_tree('offcanvas'); ?>
                 <?php foreach ($menus as $menu): ?>
                     <div class="col-md-3 col-sm-4 col-xs-6 mb-4">
-                        <a class="dropdown-item playfair-font text-decoration-none text-white fs-5" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <a class="dropdown-item playfair-font text-decoration-none text-white fs-5 mb-3" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                         <ul class="list-unstyled">
                             <?php foreach ($menu['children'] as $child): ?>
                                 <li class="nav-item mb-1">
