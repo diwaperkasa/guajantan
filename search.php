@@ -38,6 +38,5 @@ function content()
             </div>
         </div>
     </div>
-    <?php get_template_part('components/popular-posts') ?>
 <?php
 }
