@@ -10,10 +10,8 @@ function content()
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="pb-4">
-                    <h1 class="mt-2 mb-4 fs-5">
-                        <span class="playfair-font text-uppercase ls-wider text-dark h4 border-top border-dark border-thickest">Search Results For: <span><?= get_search_query() ?></span></span>
-                    </h1>
+                <div class="py-4">
+                    <h1><span class="playfair-font ls-wider text-dark h2">Search Results For: <span><?= get_search_query() ?></span></span></h1>
                 </div>
                 <ul class="list-unstyled">
                     <?php if (have_posts()) : ?>
