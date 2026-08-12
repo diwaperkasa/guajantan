@@ -12,7 +12,7 @@ function content()
             <div class="col-md-12">
                 <div class="pb-4">
                     <h1 class="mt-2 mb-4 fs-5">
-                        <span class="playfair-font text-uppercase ls-wider text-dark h4 border-top border-dark border-thickest"><?php single_cat_title(); ?></span>
+                        <span class="playfair-font text-uppercase ls-wider text-dark h4 border-top border-dark border-thickest">Search Results For: <span><?= get_search_query() ?></span></span>
                     </h1>
                 </div>
                 <ul class="list-unstyled">
@@ -24,7 +24,7 @@ function content()
                         <?php endwhile; ?>
                     <?php else : ?>
                         <li>
-                            <p class="text-secondary">No posts found in this category.</p>
+                            <p class="text-secondary">No posts found for your search query.</p>
                         </li>
                     <?php endif; ?>
                 </ul>
