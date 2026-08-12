@@ -40,3 +40,5 @@ function content()
     </div>
 <?php
 }
+
+genesis();

@@ -116,3 +116,24 @@
     background-color: #f8f9fa;
     border: var(--bs-btn-border-width) solid #f8f9fa;
 }
+
+.pagination {
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    .page-numbers {
+        margin-left: .25rem;
+        margin-right: .25rem;
+        font-size: 2rem;
+        font-family: 'Playfair Display';
+        color: rgb(var(--bs-danger-rgb));
+    }
+
+    .current {
+        --bs-text-opacity: 1;
+        color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    }
+}
