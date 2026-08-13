@@ -41,6 +41,13 @@ function crb_attach_theme_options()
                         }),
                 ])
         ]);
+
+    \Carbon_Fields\Container::make( 'term_meta', __( 'Writer Options') )
+        ->where( 'term_taxonomy', '=', 'writer' )
+        ->add_fields( [
+            \Carbon_Fields\Field::make( 'image', 'writer_photo', 'Photo' )
+                ->set_value_type('url')
+        ]);
 }
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
