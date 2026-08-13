@@ -31,7 +31,7 @@ function content()
                         <?php endif; ?>
                     </ul>
                     <div class="d-flex justify-content-center pb-4">
-                        <button class="btn d-flex align-items-center p-0 load-more-btn" data-page="1" data-length="10" data-term_id="<?php echo get_queried_object()->term_id; ?>">
+                        <button class="btn d-flex align-items-center p-0 load-more-btn" data-page="2" data-length="10" data-term_id="<?php echo get_queried_object()->term_id; ?>">
                             <span class="fw-light playfair-font fs-4 text-secondary-hover text-dark me-4 text-capitalize">More Stories</span>
                             <span style="width: 40px; height: 40px;" class="btn btn-light rounded-circle p-0 d-flex align-items-center justify-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
