@@ -182,3 +182,9 @@ function more_article()
 
 add_action('wp_ajax_more_article', 'more_article');
 add_action('wp_ajax_nopriv_more_article', 'more_article');
+
+add_action( 'pre_get_posts', function( $query ) {
+    if (is_category() && $query->is_main_query()) {
+        $query->set('no_found_rows', true);
+    }
+});
