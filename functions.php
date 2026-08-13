@@ -141,3 +141,44 @@ function wpp_custom_taxonomy_separator($separator)
 }
 
 add_filter('wpp_taxonomy_separator', 'wpp_custom_taxonomy_separator', 10, 1);
+
+function more_article()
+{
+    $result = [];
+
+    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $length = filter_input(INPUT_GET, 'length', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $query = new WP_Query([
+        'paged' => $page,
+        'posts_per_page' => $length,
+        'post_status' => 'publish',
+        'post_type' => ['post'],
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'no_found_rows'  => true,
+    ]);
+
+    foreach ($query->posts as $row) {
+        global $post;
+        $post = $row;
+        setup_postdata($post);
+        ob_start();
+        get_template_part('templates/post-landscape');
+        $html = ob_get_clean();
+        $result[] = $html;
+        wp_reset_postdata();
+    }
+
+    // Prepare response
+    $response = array(
+        'message' => 'success',
+        'data' => $result,
+    );
+
+    // Send JSON response
+    return wp_send_json($response);
+}
+
+add_action('wp_ajax_more_article', 'more_article');
+add_action('wp_ajax_nopriv_more_article', 'more_article');
