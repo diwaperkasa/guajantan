@@ -148,6 +148,7 @@ function more_article()
 
     $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $length = filter_input(INPUT_GET, 'length', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $term_id = filter_input(INPUT_GET, 'term_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     $query = new WP_Query([
         'paged' => $page,
@@ -157,14 +158,22 @@ function more_article()
         'orderby' => 'date',
         'order' => 'DESC',
         'no_found_rows'  => true,
+        'tax_query' => [
+            [
+                'taxonomy' => 'category',
+                'field'    => 'term_id',
+                'terms'    => $term_id,
+            ]
+        ]
     ]);
 
+    
     foreach ($query->posts as $row) {
         global $post;
         $post = $row;
         setup_postdata($post);
         ob_start();
-        get_template_part('templates/post-landscape');
+        get_template_part('components/post', 'landscape');
         $html = ob_get_clean();
         $result[] = $html;
         wp_reset_postdata();
