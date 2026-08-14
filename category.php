@@ -12,10 +12,20 @@ function content()
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="pb-4">
-                        <h1 class="mt-2 mb-4 fs-5">
-                            <span class="playfair-font text-uppercase ls-wider text-dark h4 border-top border-dark border-thickest"><?php single_cat_title(); ?></span>
+                    <div class="py-4">
+                        <h1 class="mb-0">
+                            <span class="playfair-font text-uppercase ls-wider text-dark"><?php single_cat_title(); ?></span>
                         </h1>
+                        <?php $children = get_categories( ['parent' => get_queried_object_id(), 'hide_empty' => false ]);?>
+                        <?php if ($children) : ?>
+                            <ul class="mt-3 nav overflow-x-auto align-items-center flex-nowrap text-nowrap w-100 border-bottom border-dark">
+                                <?php foreach ($children as $menu): ?>
+                                    <li class="nav-item pe-4">
+                                        <a class="nav-link p-0 inter-font text-uppercase text-dark" href="<?= $menu->term_url ?>"><?= $menu->name ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                     <ul class="list-unstyled post-archive-container">
                         <?php if (have_posts()) : ?>
