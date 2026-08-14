@@ -25,9 +25,11 @@
             <p class="text-secondary mb-0 fw-light ls-wider text-uppercase"><?= $primary_category->name ?></p>
         </a>
     <?php endif; ?>
-    <a href="<?php the_permalink(); ?>" class="text-decoration-none text-dark text-secondary-hover">
-        <h1 class="playfair-font mb-3 text-center"><?= get_the_title() ?></h1>
-    </a>
+    <div class="px-3 px-md-0">
+        <a href="<?php the_permalink(); ?>" class="text-decoration-none text-dark text-secondary-hover">
+            <h1 class="playfair-font mb-3 text-center"><?= get_the_title() ?></h1>
+        </a>
+    </div>
     <?php $writers = get_the_terms(get_the_ID(), 'writer'); ?>
     <?php if ($writers && !is_wp_error($writers)): ?>
         <p class="text-secondary fw-light ls-wider mb-0 text-center">By
