@@ -21,7 +21,7 @@ function content()
                             <ul class="mt-3 nav overflow-x-auto align-items-center flex-nowrap text-nowrap w-100 border-bottom border-dark">
                                 <?php foreach ($children as $menu): ?>
                                     <li class="nav-item pe-4">
-                                        <a class="nav-link p-0 inter-font text-uppercase text-dark" href="<?= $menu->term_url ?>"><?= $menu->name ?></a>
+                                        <a class="nav-link p-0 inter-font text-uppercase text-dark text-secondary-hover" href="<?= get_category_link($menu) ?>"><?= $menu->name ?></a>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
