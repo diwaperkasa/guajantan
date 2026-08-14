@@ -13450,6 +13450,17 @@ textarea.form-control-lg {
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
 
+.archive-description {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.archive-description .archive-title {
+  font-family: "Playfair Display";
+  font-size: calc(1.375rem + 1.5vw);
+}
+
 .loader {
   width: 120px;
   height: 20px;

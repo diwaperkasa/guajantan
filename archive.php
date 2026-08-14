@@ -12,11 +12,6 @@ function content()
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="py-4">
-                        <h1 class="mb-0">
-                            <span class="playfair-font text-uppercase ls-wider text-dark"><?= get_queried_object()->name; ?></span>
-                        </h1>
-                    </div>
                     <ul class="list-unstyled post-archive-container">
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
