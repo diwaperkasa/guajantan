@@ -58,7 +58,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-collapse bg-white border-bottom d-lg-none">
+        <nav class="navbar navbar-collapse border-top bg-white d-lg-none">
             <div class="container">
                 <ul class="nav overflow-x-auto justify-content-between align-items-center flex-nowrap text-nowrap w-100">
                     <?php foreach ($menus as $menu): ?>
