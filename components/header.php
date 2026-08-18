@@ -155,11 +155,11 @@
                 <?php $menus = get_wp_menu_tree('offcanvas'); ?>
                 <?php foreach ($menus as $menu): ?>
                     <div class="col-md-3 col-sm-4 col-xs-6 mb-4">
-                        <a class="dropdown-item playfair-font text-decoration-none text-dark text-secendary-hover fs-5 mb-3" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <a class="dropdown-item playfair-font text-decoration-none text-dark text-secondary-hover fs-5 mb-3" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                         <ul class="list-unstyled">
                             <?php foreach ($menu['children'] as $child): ?>
                                 <li class="nav-item mb-1">
-                                    <a class="dropdown-item inter-font text-decoration-none text-dark text-secendary-hover fs-6" href="<?= $child['url'] ?>"><?= $child['title'] ?></a>
+                                    <a class="dropdown-item inter-font text-decoration-none text-dark text-secondary-hover fs-6" href="<?= $child['url'] ?>"><?= $child['title'] ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
