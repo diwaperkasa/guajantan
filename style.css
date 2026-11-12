@@ -13408,8 +13408,20 @@ textarea.form-control-lg {
   --bs-border-width: 7px !important;
 }
 
-.post__content h1, .post__content .h1, .post__content h2, .post__content .h2, .post__content h3, .post__content .h3, .post__content h4, .post__content .h4, .post__content h5, .post__content .h5, .post__content h6, .post__content .h6 {
+.site-inner h1, .site-inner .h1, .site-inner h2, .site-inner .h2, .site-inner h3, .site-inner .h3, .site-inner h4, .site-inner .h4, .site-inner h5, .site-inner .h5, .site-inner h6, .site-inner .h6 {
   font-family: "Playfair Display";
+}
+.site-inner .wp-caption figcaption {
+  font-size: 0.75rem;
+  font-family: "Inter";
+}
+.site-inner a {
+  color: rgba(var(--bs-dark-rgb), 1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.site-inner a:hover {
+  color: rgba(var(--bs-secondary-rgb), 1);
 }
 
 @media (max-width: 767.98px) {
